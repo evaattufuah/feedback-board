@@ -41,7 +41,6 @@ const Editfeedback = () => {
   const [editedDescription, setEditedDescription] = useState("");
   const [editedCategory, setEditedCategory] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  
 
   const router = useRouter();
 
@@ -49,9 +48,9 @@ const Editfeedback = () => {
   const id = searchParams.get("id");
   console.log(id);
 
-  const findFeedback = async () => {
+  const findFeedback = async (feedbackId: string | null) => {
     try {
-      const res = await findFeedbackById(id);
+      const res = await findFeedbackById(feedbackId);
       console.log(res);
       if (res) {
         setFeedback(res);
@@ -86,8 +85,8 @@ const Editfeedback = () => {
   };
 
   useEffect(() => {
-    findFeedback();
-  }, []);
+    findFeedback(id);
+  }, [id]);
 
   console.log({
     editedTitle,

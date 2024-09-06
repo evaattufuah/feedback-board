@@ -139,7 +139,7 @@ const Suggestions = () => {
 
       <div className="w-[825px] mt-5 h-[250px] flex shadow-lg border-stroke p-5 bg-white  mb-6">
         <div className=" rounded text-[#ffff] text-center">
-          <img
+          <Image
             src="man-oval.png"
             className="sm:block hidden sm:w-[65px] sm:h-[35px]"
             width={25}
@@ -153,8 +153,8 @@ const Suggestions = () => {
           <p className="text-sm">
             <span className="text-pluee">@annev1990</span> Good point! Using any
             kind of style extension is great and can be highly customizable,
-            like the ability to change contrast and brightness. I'd prefer not
-            to use one of such extensions, however, for security and privacy
+            like the ability to change contrast and brightness. Id prefer not to
+            use one of such extensions, however, for security and privacy
             reasons.
           </p>
           <div>

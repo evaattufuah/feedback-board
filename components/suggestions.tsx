@@ -6,7 +6,10 @@ import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../components/ui/button";
 import prisma from "@/lib/prisma";
-import { findFeedbacks } from "@/app/actions/findFeedbacks";
+import {
+  findFeedbacks,
+  findFeedbacksByCategory,
+} from "@/app/actions/findFeedbacks";
 import Image from "next/image";
 import { Vector } from "@/assets/images";
 
@@ -26,9 +29,18 @@ type Feedback = {
 const Suggestions = ({ category, setCategory }: SuggestionsProps) => {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>();
 
-  const findCurrentFeedbacks = async (selectedCategory: string) => {
+  const findCurrentFeedbacksByCategory = async (selectedCategory: string) => {
     try {
-      const res = await findFeedbacks(selectedCategory);
+      const res = await findFeedbacksByCategory(selectedCategory);
+      setFeedbacks(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const findCurrentFeedbacks = async () => {
+    try {
+      const res = await findFeedbacks();
       setFeedbacks(res);
     } catch (error) {
       console.log(error);
@@ -36,7 +48,11 @@ const Suggestions = ({ category, setCategory }: SuggestionsProps) => {
   };
 
   useEffect(() => {
-    findCurrentFeedbacks(category);
+    if (category === "All") {
+      findCurrentFeedbacks();
+    } else {
+      findCurrentFeedbacksByCategory(category);
+    }
   }, [category]);
 
   return (

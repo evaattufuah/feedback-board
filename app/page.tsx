@@ -4,7 +4,7 @@ import Navbar from "@/components/navabr";
 import Suggestions from "@/components/suggestions";
 
 export default function Home() {
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("All");
 
   return (
     <main className="sm:flex">

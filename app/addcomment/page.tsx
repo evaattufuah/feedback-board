@@ -5,6 +5,7 @@ import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
+import { Man, ManOval, WomanOval } from "@/assets/images";
 
 const Suggestions = () => {
   return (
@@ -50,7 +51,7 @@ const Suggestions = () => {
       <div className="w-[825px] mt-5 h-[250px] flex shadow-lg border-stroke p-5 bg-white  mb-6">
         <div className=" rounded text-[#ffff] text-center">
           <Image
-            src="man.png"
+            src={Man}
             className="sm:block hidden sm:w-[65px] sm:h-[35px]"
             width={25}
             height={50}
@@ -85,7 +86,7 @@ const Suggestions = () => {
       <div className="w-[825px] mt-5 h-[250px] flex shadow-lg border-stroke p-5 bg-white  mb-6">
         <div className=" rounded text-[#ffff] text-center">
           <Image
-            src="man.png"
+            src={Man}
             className="sm:block hidden sm:w-[65px] sm:h-[35px]"
             width={25}
             height={50}
@@ -112,7 +113,7 @@ const Suggestions = () => {
       <div className="w-[825px] mt-5 h-[250px] flex shadow-lg border-stroke p-5 bg-white  mb-6">
         <div className=" rounded text-[#ffff] text-center">
           <Image
-            src="woman-oval.png"
+            src={WomanOval}
             className="sm:block hidden sm:w-[65px] sm:h-[35px]"
             width={25}
             height={50}
@@ -140,7 +141,7 @@ const Suggestions = () => {
       <div className="w-[825px] mt-5 h-[250px] flex shadow-lg border-stroke p-5 bg-white  mb-6">
         <div className=" rounded text-[#ffff] text-center">
           <Image
-            src="man-oval.png"
+            src={ManOval}
             className="sm:block hidden sm:w-[65px] sm:h-[35px]"
             width={25}
             height={50}

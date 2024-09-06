@@ -1,16 +1,12 @@
-import React from "react";
-// import Navbar from '../navbar/page'
 import { DropdownMenuDemo1 } from "@/components/menu";
-
 import Link from "next/link";
 import Image from "next/image";
+import { Microscope } from "@/assets/images";
 
 const SuggestionsEmpty = () => {
   return (
     <div>
       <div className="sm:flex">
-        {/* <Navbar /> */}
-
         <div>
           <div className=" sm:bg-deep sm:flex header w-375px bg-red-300 sm:mt-10 sm:w-500px sm:h-16 sm:rounded-lg p-4 flex cursor-pointer gap-6">
             <svg
@@ -52,7 +48,7 @@ const SuggestionsEmpty = () => {
 
           <div className="flex flex-col justify-center items-center p-20">
             <Image
-              src="/microscope.png"
+              src={Microscope}
               className="sm:block hidden sm:w-[125px] sm:h-[150px]"
               width={125}
               height={150}

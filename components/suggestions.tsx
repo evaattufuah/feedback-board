@@ -8,6 +8,7 @@ import { Button } from "../components/ui/button";
 import prisma from "@/lib/prisma";
 import { findFeedbacks } from "@/app/actions/findFeedbacks";
 import Image from "next/image";
+import { Vector } from "@/assets/images";
 
 type SuggestionsProps = {
   category: string;
@@ -42,7 +43,7 @@ const Suggestions = ({ category, setCategory }: SuggestionsProps) => {
     <div>
       <div className=" sm:bg-deep sm:flex header w-375px bg-red-300 sm:mt-10 sm:w-500px sm:h-16 sm:rounded-lg p-4 flex cursor-pointer text-center gap-6">
         <Image
-          src="vector.png"
+          src={Vector}
           className="sm:block hidden  mb-2 sm:w-[25px] sm:h-[50px]"
           width={25}
           height={50}

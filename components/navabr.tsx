@@ -9,7 +9,6 @@ type NavbarProps = {
 };
 
 function Navbar({ setCategory }: NavbarProps) {
-    
   const handleCategoryClick = (category: string) => {
     setCategory(category);
   };
@@ -38,7 +37,7 @@ function Navbar({ setCategory }: NavbarProps) {
               <button
                 type="button"
                 className="hover:bg-blue-500 hover:text-white  bg-light  p-3 rounded "
-                onClick={() => handleCategoryClick("")}
+                onClick={() => handleCategoryClick("All")}
               >
                 ALL
               </button>
